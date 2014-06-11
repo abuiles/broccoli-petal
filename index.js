@@ -23,6 +23,7 @@ AmdTranform.prototype.processString = function (source, destDir) {
 
   if (leaf.hasDefine && leaf.isAnonymous){
     var name = path.basename(destDir, '.js');
+    name     = name.split('.')[0].replace(/_/g, '-');
 
     leaf.deanonymize(name);
     source = escodegen.generate(leaf.ast);
