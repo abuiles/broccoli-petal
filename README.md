@@ -1,3 +1,3 @@
-## broccoli-amd-transforms  [![Build Status](https://travis-ci.org/abuiles/broccoli-amd-transforms.png?branch=master)](https://travis-ci.org/abuiles/broccoli-amd-transforms)
+## broccoli-amd-deanonymize  [![Build Status](https://travis-ci.org/abuiles/broccoli-amd-deanonymize.png?branch=master)](https://travis-ci.org/abuiles/broccoli-amd-deanonymize)
 
-Transforms AMD anonymous modules to named modules.
+Deanonimize AMD modules.

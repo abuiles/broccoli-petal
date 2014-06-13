@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-amd-transforms",
+  "name": "broccoli-amd-deanonymize",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/abuiles/broccoli-amd-transforms.git"
+    "url": "git://github.com/abuiles/broccoli-amd-deanonymize.git"
   },
   "author": "Adolfo Builes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abuiles/broccoli-amd-transforms/issues"
+    "url": "https://github.com/abuiles/broccoli-amd-deanonymize/issues"
   },
-  "homepage": "https://github.com/abuiles/broccoli-amd-transforms"
+  "homepage": "https://github.com/abuiles/broccoli-amd-deanonymize"
 }
