@@ -18,7 +18,7 @@
     "esprima-ast-equality": "0.0.4"
   },
   "scripts": {
-    "test": "bower install && broccoli build temp && mocha tests/"
+    "test": "broccoli build temp && mocha tests/"
   },
   "repository": {
     "type": "git",
