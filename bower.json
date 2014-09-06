@@ -1,0 +1,6 @@
+{
+  "name": "broccoli-amd-remap",
+  "devDependencies": {
+    "ember-qunit": "~0.1.8"
+  }
+}

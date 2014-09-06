@@ -1,3 +1,5 @@
-var amdFilter = require('./index');
+var remap = require('./index');
 
-module.exports = amdFilter('./tests/fixtures/lib');
+module.exports = remap('bower_components/ember-qunit/dist/amd', {
+  name: 'ember-qunit'
+});

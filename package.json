@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-amd-deanonymize",
+  "name": "broccoli-amd-remap",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/abuiles/broccoli-amd-deanonymize.git"
+    "url": "git://github.com/abuiles/broccoli-amd-remap.git"
   },
   "author": "Adolfo Builes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abuiles/broccoli-amd-deanonymize/issues"
+    "url": "https://github.com/abuiles/broccoli-amd-remap/issues"
   },
-  "homepage": "https://github.com/abuiles/broccoli-amd-deanonymize"
+  "homepage": "https://github.com/abuiles/broccoli-amd-remap"
 }

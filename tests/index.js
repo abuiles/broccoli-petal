@@ -7,20 +7,15 @@ after(function() {
   rimraf.sync('temp');
 });
 
-it('transforms anonymous modules to named', function() {
+it('remaps main with the module name', function() {
   var generated = fs.readFileSync('temp/main.js'),
       expected  = fs.readFileSync('tests/fixtures/expected-main.js');
   astEquality(generated, expected);
 });
 
-it('removes dots from module name', function() {
-  var generated = fs.readFileSync('temp/minified.min.js'),
-      expected  = fs.readFileSync('tests/fixtures/expected-minified.js');
-  astEquality(generated, expected);
-});
 
-it('snake case module name', function() {
-  var generated = fs.readFileSync('temp/foo_bar.js'),
-      expected  = fs.readFileSync('tests/fixtures/expected-foo-bar.js');
+it('remaps children under module name', function() {
+  var generated = fs.readFileSync('temp/isolated-container.js'),
+      expected  = fs.readFileSync('tests/fixtures/expected-isolated-container.js');
   astEquality(generated, expected);
 });

@@ -1,3 +1,3 @@
-## broccoli-amd-deanonymize  [![Build Status](https://travis-ci.org/abuiles/broccoli-amd-deanonymize.png?branch=master)](https://travis-ci.org/abuiles/broccoli-amd-deanonymize)
+## broccoli-amd-remap  [![Build Status](https://travis-ci.org/abuiles/broccoli-amd-remap.png?branch=master)](https://travis-ci.org/abuiles/broccoli-amd-remap)
 
-Deanonimize AMD modules.
+Remaps JavaScript libraries to named AMD.

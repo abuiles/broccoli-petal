@@ -3,34 +3,34 @@ var Leaf    = require('leaf');
 var path     = require('path');
 var escodegen = require('escodegen');
 
-module.exports = AmdTranform;
+module.exports = BroccoliRemap;
 
-AmdTranform.prototype = Object.create(Filter.prototype);
-AmdTranform.prototype.constructor = AmdTranform;
+BroccoliRemap.prototype = Object.create(Filter.prototype);
+BroccoliRemap.prototype.constructor = BroccoliRemap;
 
-function AmdTranform (inputTree, options) {
-  if (!(this instanceof AmdTranform)) return new AmdTranform(inputTree, options);
+function BroccoliRemap (inputTree, options) {
+  if (!(this instanceof BroccoliRemap)) return new BroccoliRemap(inputTree, options);
 
   Filter.call(this, inputTree, options);
   this.options = options || {};
 }
 
-AmdTranform.prototype.extensions = ['js'];
-AmdTranform.prototype.targetExtension = 'js';
+BroccoliRemap.prototype.extensions = ['js'];
+BroccoliRemap.prototype.targetExtension = 'js';
 
-AmdTranform.prototype.processString = function (source, destDir) {
+BroccoliRemap.prototype.processString = function (source, destDir) {
   var leaf = new Leaf(destDir, source);
 
-  if (leaf.hasDefine && leaf.isAnonymous){
+  if (leaf.hasDefine() && leaf.isAnonymous){
     var name = this.options.name;
+    var fileName = path.basename(destDir, '.js');
 
-    if (!name) {
-      name = path.basename(destDir, '.js');
-      name = name.split('.')[0].replace(/_/g, '-');
+    if (fileName !== 'main') {
+      name = name + '/' + fileName;
     }
 
-    leaf.deanonymize(name);
-    source = escodegen.generate(leaf.ast);
+    var remaped = leaf.remap(name);
+    source = escodegen.generate(remaped.ast);
   }
 
   return source;
