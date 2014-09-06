@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-amd-remap",
+  "name": "broccoli-leaf",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/abuiles/broccoli-amd-remap.git"
+    "url": "git://github.com/abuiles/broccoli-leaf.git"
   },
   "author": "Adolfo Builes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abuiles/broccoli-amd-remap/issues"
+    "url": "https://github.com/abuiles/broccoli-leaf/issues"
   },
-  "homepage": "https://github.com/abuiles/broccoli-amd-remap"
+  "homepage": "https://github.com/abuiles/broccoli-leaf"
 }

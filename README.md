@@ -1,3 +1,3 @@
-## broccoli-amd-remap  [![Build Status](https://travis-ci.org/abuiles/broccoli-amd-remap.png?branch=master)](https://travis-ci.org/abuiles/broccoli-amd-remap)
+## broccoli-leaf  [![Build Status](https://travis-ci.org/abuiles/broccoli-leaf.png?branch=master)](https://travis-ci.org/abuiles/broccoli-leaf)
 
 Remaps JavaScript libraries to named AMD.

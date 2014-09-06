@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-amd-remap",
+  "name": "broccoli-leaf",
   "devDependencies": {
     "ember-qunit": "~0.1.8"
   }
