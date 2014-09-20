@@ -1,5 +1,5 @@
 var Filter = require('broccoli-filter');
-var Leaf    = require('leaf');
+var Petal    = require('petal');
 var path     = require('path');
 var escodegen = require('escodegen');
 
@@ -19,9 +19,9 @@ BroccoliRemap.prototype.extensions = ['js'];
 BroccoliRemap.prototype.targetExtension = 'js';
 
 BroccoliRemap.prototype.processString = function (source, destDir) {
-  var leaf = new Leaf(destDir, source);
+  var petal = new Petal(destDir, source);
 
-  if (leaf.hasDefine() && leaf.isAnonymous){
+  if (petal.hasDefine() && petal.isAnonymous){
     var name = this.options.name;
     var fileName = path.basename(destDir, '.js');
 
@@ -29,7 +29,7 @@ BroccoliRemap.prototype.processString = function (source, destDir) {
       name = name + '/' + fileName;
     }
 
-    var remaped = leaf.remap(name);
+    var remaped = petal.remap(name);
     source = escodegen.generate(remaped.ast);
   }
 
