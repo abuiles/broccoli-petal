@@ -1,6 +1,6 @@
 {
   "name": "broccoli-petal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "broccoli-filter": "^0.1.6",
     "escodegen": "^1.3.2",
-    "petal": "0.0.2"
+    "petal": "stefanpenner/petal"
   },
   "devDependencies": {
     "mocha": "^1.20.0",
