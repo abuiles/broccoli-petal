@@ -21,17 +21,15 @@ BroccoliRemap.prototype.targetExtension = 'js';
 BroccoliRemap.prototype.processString = function (source, destDir) {
   var petal = new Petal(destDir, source);
 
-  if (petal.hasDefine() && petal.isAnonymous){
-    var name = this.options.name;
-    var fileName = path.basename(destDir, '.js');
+  var name = this.options.name;
+  var fileName = path.basename(destDir, '.js');
 
-    if (fileName !== 'main') {
-      name = name + '/' + fileName;
-    }
-
-    var remaped = petal.remap(name);
-    source = escodegen.generate(remaped.ast);
+  if (fileName !== 'main') {
+    name = name + '/' + fileName;
   }
+
+  var remaped = petal.remap(name);
+  source = escodegen.generate(remaped.ast);
 
   return source;
 };
